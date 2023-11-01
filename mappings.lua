@@ -3,7 +3,7 @@ local M = {}
 M.dap = {
   plugin = true,
   n = {
-    ["<leader>db"] = { 
+    ["<leader>db"] = {
       "<cmd> DapToggleBreakpoint <CR>",
       "Add breakpoint at line",
     },
@@ -26,10 +26,10 @@ M.dap_python = {
   plugin = true,
   n = {
     ["<leader>dpr"] = {
-      function()
+      function ()
         require('dap-python').test_method()
       end,
-      "python dap"
+      "Python dap"
     }
   }
 }
@@ -41,7 +41,7 @@ M.crates = {
       function ()
         require('crates').upgrade_all_crates()
       end,
-      "update crates"
+      "Update crates"
     }
   }
 }

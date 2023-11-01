@@ -3,9 +3,14 @@ local null_ls = require('null-ls')
 
 local opts = {
   sources = {
+    null_ls.builtins.formatting.luaformatter,
     null_ls.builtins.formatting.black,
+    null_ls.builtins.formatting.djlint,
     null_ls.builtins.diagnostics.mypy,
     null_ls.builtins.diagnostics.ruff,
+    null_ls.builtins.diagnostics.djlint,
+    null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.formatting.clang_format,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
@@ -23,4 +28,5 @@ local opts = {
     end
   end,
 }
+
 return opts

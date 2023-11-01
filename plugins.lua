@@ -9,17 +9,25 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "luaformatter",
         "rust-analyzer",
         "black",
         "debugpy",
         "mypy",
         "ruff",
         "pyright",
+        "djlint",
         "clangd",
         "clang-format",
         "codelldb",
+        "prettierd",
       },
     },
+  },
+  {
+    "HiPhish/rainbow-delimiters.nvim",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    event = "BufEnter",
   },
   {
     "neovim/nvim-lspconfig",
