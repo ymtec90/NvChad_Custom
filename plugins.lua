@@ -27,6 +27,12 @@ local plugins = {
     event = "BufEnter",
   },
   {
+    "folke/todo-comments.nvim",
+    event = "BufEnter",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+  },
+  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
@@ -64,6 +70,14 @@ local plugins = {
   {
     "itchyny/vim-cursorword",
     event = "BufEnter",
+  },
+  {
+    "jiaoshijie/undotree",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = true,
+    keys = { -- load the plugin only when using it's keybinding:
+      { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
+    },
   },
   {
     "neovim/nvim-lspconfig",

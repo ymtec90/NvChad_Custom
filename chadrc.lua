@@ -2,7 +2,7 @@
 local M = {}
 
 M.ui = {
-  theme = 'gruvbox',
+  theme = 'gruvchad',
   nvdash = {
     load_on_startup = true,
   },
