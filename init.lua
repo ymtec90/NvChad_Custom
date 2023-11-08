@@ -11,6 +11,7 @@ vim.keymap.set("n", "O", "O<ESC>")
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("n", "Y", "y$")
+vim.keymap.set("n", ";", ":")
 -- Disable keys
 vim.keymap.set("n", "<Up>", "<Nop>")
 vim.keymap.set("n", "<Down>", "<Nop>")
@@ -26,7 +27,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Vimscript
 function CreateAutoCommands()
-  vim.cmd([[
+  vim.cmd [[
     augroup cursor_off
       autocmd!
       autocmd WinLeave * set nocursorline
@@ -37,7 +38,7 @@ function CreateAutoCommands()
       autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
       autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
     augroup END
-  ]])
+  ]]
 end
 
 CreateAutoCommands()
