@@ -63,11 +63,6 @@ local plugins = {
     event = "BufEnter",
   },
   {
-    "turbio/bracey.vim",
-    cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
-    build = "npm install --prefix server",
-  },
-  {
     "itchyny/vim-cursorword",
     event = "BufEnter",
   },
