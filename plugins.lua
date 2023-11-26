@@ -19,6 +19,10 @@ local plugins = {
         "javascript",
         "typescript",
         "htmldjango",
+        "vim",
+        "regex",
+        "markdown",
+        "markdown_inline",
       },
     },
   },
@@ -79,6 +83,18 @@ local plugins = {
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
+    end,
+  },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {},
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+    config = function()
+      require "custom.configs.noice"
     end,
   },
   {
