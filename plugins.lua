@@ -86,23 +86,6 @@ local plugins = {
     end,
   },
   {
-    "MarcHamamji/runner.nvim",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-      },
-    },
-    cmd = {
-      "Runner",
-      "AutoRunner",
-      "AutoRunnerStop",
-    },
-    config = function()
-      require("runner").setup()
-    end,
-  },
-  {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {},

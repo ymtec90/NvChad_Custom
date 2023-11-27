@@ -12,38 +12,38 @@ M.dap = {
       "Start or continue the debugger",
     },
     ["<leader>dus"] = {
-      function ()
-        local widgets = require('dap.ui.widgets');
-        local sidebar = widgets.sidebar(widgets.scopes);
-        sidebar.open();
+      function()
+        local widgets = require "dap.ui.widgets"
+        local sidebar = widgets.sidebar(widgets.scopes)
+        sidebar.open()
       end,
-      "Open debugging sidebar"
-    }
-  }
+      "Open debugging sidebar",
+    },
+  },
 }
 
 M.dap_python = {
   plugin = true,
   n = {
     ["<leader>dpr"] = {
-      function ()
-        require('dap-python').test_method()
+      function()
+        require("dap-python").test_method()
       end,
-      "Python dap"
-    }
-  }
+      "Python dap",
+    },
+  },
 }
 
 M.crates = {
   plugin = true,
   n = {
     ["<leader>rcu"] = {
-      function ()
-        require('crates').upgrade_all_crates()
+      function()
+        require("crates").upgrade_all_crates()
       end,
-      "Update crates"
-    }
-  }
+      "Update crates",
+    },
+  },
 }
 
 return M
